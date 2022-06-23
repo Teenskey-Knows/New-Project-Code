@@ -42,3 +42,10 @@ function getAllPoems(){
     fetch(url).then(res=>res.json())
     .then(poemObject=>poemObject.forEach(poem=>renderOnePoem(poem)))
 }
+
+//Initial Render
+function initialize(){
+    getAllPoems()
+}
+
+initialize()
