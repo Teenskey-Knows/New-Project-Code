@@ -11,13 +11,23 @@ html {
   gap: 0.3rem;
 }
 
+#bigger-container{
+    display: flex;
+    font-display: column;
+}
+
 #poet-image{
     height: 500px;
     width: 500px;
 }
 
 #poets-details{
-    background-color: beige;
-    height: 5rem;
+    background-color: rgb(243, 74, 8);
+    height: 8rem;
     width: 500px;
+}
+
+#poet-key{
+    display: flex;
+    flex-direction: column;
 }
