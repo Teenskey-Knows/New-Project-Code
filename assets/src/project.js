@@ -34,3 +34,11 @@ mainDiv.innerHTML = `
 
 document.querySelector('#grid-container').appendChild(mainDiv)
 }
+
+//Fetch Requests
+//Get Fetch for all my poems
+
+function getAllPoems(){
+    fetch(url).then(res=>res.json())
+    .then(poemObject=>poemObject.forEach(poem=>renderOnePoem(poem)))
+}
