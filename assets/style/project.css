@@ -3,3 +3,10 @@ html {
   padding: 0px;
   box-sizing: border-box;
 }
+
+/* Styling The Dom HTML */
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+}
