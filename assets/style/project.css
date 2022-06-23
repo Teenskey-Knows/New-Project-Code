@@ -10,3 +10,14 @@ html {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.3rem;
 }
+
+#poet-image{
+    height: 500px;
+    width: 500px;
+}
+
+#poets-details{
+    background-color: beige;
+    height: 5rem;
+    width: 500px;
+}
