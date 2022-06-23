@@ -7,24 +7,23 @@ mainDiv.innerHTML = `
 <div id="bigger-container">
 <div id="poet-key">
   <img
-    src="https://pbs.twimg.com/profile_images/1518574167444144130/gbxEiBIy_400x400.jpg"
+    src="${poem.poet.photo_avatar_url}"
     alt="poet image"
     id="poet-image"
   />
   <div id="poets-details">
-    <h2 id="poet-name">Author's Name: Martin Kamau</h2>
+    <h2 id="poet-name">Author's Name: ${poem.poet.name}</h2>
     <br />
-    <a href="#" target="blank" id="poet-url">Link Up With Author</a>
+    <a href="${poem.poet.url}" target="blank" id="poet-url">Link Up With Author</a>
   </div>
 </div>
 
 <div id="poem-container">
-  <h2 id="poetry-title">Hello</h2>
-  <p id="poetry-content">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-    alias quam
+  <h2 id="poetry-title">${poem.title}</h2>
+  <p id="poetry-content">${poem.content}
+
   </p>
-  <a href="" id="poetry-url">Read more on the poem</a>
+  <a href="${poem.url}" id="poetry-url">Read more on the poem</a>
 </div>
 </div>
 
@@ -37,6 +36,7 @@ document.querySelector('#grid-container').appendChild(mainDiv)
 
 //Fetch Requests
 //Get Fetch for all my poems
+const url = 'https://www.poemist.com/api/v1/randompoems'
 
 function getAllPoems(){
     fetch(url).then(res=>res.json())
