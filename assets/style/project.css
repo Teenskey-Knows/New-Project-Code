@@ -7,7 +7,7 @@ html {
 /* Styling The Dom HTML */
 #grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 0.3rem;
 }
 
@@ -21,6 +21,7 @@ html {
     width: 500px;
 }
 
+
 #poets-details{
     background-color: rgb(243, 74, 8);
     height: 8rem;
@@ -30,4 +31,11 @@ html {
 #poet-key{
     display: flex;
     flex-direction: column;
+}
+
+#poem-container{
+    width: 500px;
+    height: 630px;
+    background-color: blue;
+    margin-left: 0.3rem;
 }
