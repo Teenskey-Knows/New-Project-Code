@@ -1,6 +1,16 @@
 //EventListener
 
-document.querySelector('#poetry-form').addEventListener('submit',handleSubmit)
+// document.querySelector('#poetry-form').addEventListener('submit',handleSubmit)
+document.addEventListener('DOMContentLoaded',function myDom(){
+
+  const x1=document.getElementById('#poem-container')
+  x1.addEventListener('mouseover',function switchColor(){
+    x1.style.color = 'orange'
+
+
+  })
+})
+
 
 //Event handlers
 
@@ -18,8 +28,46 @@ function handleSubmit(event){
 
 
   }
-  renderOnePoem(poem)
+
   postPoem(postPoemObject)
+
+}
+//POST DOM Renderer
+
+function addMorePoem(poetry){
+ 
+  let secondmainDiv = document.createElement('div')
+  secondmainDiv.className = 'grid-container-One'
+  secondmainDiv.innerHTML = `
+  <div id="bigger-container">
+<div id="poet-key">
+  <img
+    src="${poetry.poet.photo_avatar_url}"
+    alt="poet image"
+    id="poet-image"
+  />
+  <div id="poets-details">
+    <h2 id="poet-name">Author's Name: ${poetry.poet.name}</h2>
+    <br />
+    <a href="${poetry.poet.url}" target="blank" id="poet-url">Link Up With Author</a>
+  </div>
+</div>
+
+<div id="poem-container">
+  <h2 id="poetry-title">${poetry.title}</h2>
+  <p id="poetry-content">${poetry.content}
+
+  </p>
+  <a href="${poetry.url}" id="poetry-url">Read more on the poem</a>
+</div>
+</div>
+
+  
+  
+  `
+  // Attaching Poem to DOM
+
+  document.querySelector('#grid-container-One').appendChild(secondmainDiv)
 
 }
 
@@ -79,7 +127,7 @@ fetch('http://localhost:3000/poetry',{
     'Content-Type' : 'application/json'
   },
   body: JSON.stringify(postPoemObject)
-}).then(response=>response.json()).then(poemss=>console.log(poemss))
+}).then(response=>response.json()).then(poemz=>poemz.forEach(poema=>addMorePoem(poema)))
 
   
 }
@@ -87,6 +135,7 @@ fetch('http://localhost:3000/poetry',{
 //Initial Render
 function initialize(){
     getAllPoems()
+    
 }
 
 initialize()
