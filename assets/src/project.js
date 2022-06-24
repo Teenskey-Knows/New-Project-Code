@@ -1,3 +1,21 @@
+//EventListener
+
+document.querySelector('poetry-form').addEventListener('submit',handleSubmit)
+
+//Event handlers
+
+function handleSubmit(event){
+  event.preventDefault()
+  let postPoemObject = {
+    
+  }
+
+}
+
+
+
+
+
 // DOM Renderer Function
 
 function renderOnePoem(poem){

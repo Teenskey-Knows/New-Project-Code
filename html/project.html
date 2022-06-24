@@ -10,12 +10,13 @@
   </head>
   <body>
     <h1 class="header">The Poetry Hub</h1>
-    <div id="poetry-form">
-      <label for="title">Poetry Title</label>
+    <div id="poetry-form-layout">
+      <form id="poetry-form" method="POST" class="data-form" action="">      
+      <label for="title">Poetry Title
       <br />
-      <input type="text" placeholder="Poetry Title" />
+      <input type="text" placeholder="Poetry Title" name="title" value=""/></label>
       <br />
-      <label for="poetryContent">Poetry Content</label>
+      <label for="poetryContent">Poetry Content
       <br />
       <textarea
         placeholder="Input poetry content"
@@ -23,12 +24,31 @@
         id="poetry-content"
         cols="20"
         rows="10"
-      ></textarea>
+        value=""
+      ></textarea></label>
       <br />
-      <label for="poet">Poetry Link Source</label>
+      <label for="poet">Poetry Link Source
       <br />
-      <input type="url" placeholder="input poetry url" />
-      <br />
+      <input type="url" placeholder="input poetry url" name="url"  value=""/>
+      </label><br />
+      <label for="poet-name">Poet's image
+        <br>
+        <input type="text" placeholder="input poet's name" name="name" value="">
+      </label>
+      <br>
+      <label for="poet-image">Poet's image
+        <br>
+        <input type="url" placeholder="input poet's image url" name="imageUrl" value="">
+      </label>
+      <br>
+      <label for="poet-link">Poet's link's websites
+        <br>
+        <input type="url" placeholder="input poet's website url" name="websiterUrl" value="">
+      </label>
+      <br>
+
+      <button type="submit" id="btn-submit">Post</button>
+    </form>
     </div>
     <!-- My  API Content Structure -->
 
