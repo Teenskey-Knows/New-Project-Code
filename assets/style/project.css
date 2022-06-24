@@ -4,8 +4,22 @@ html {
   box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(233, 136, 25);
+/* body{
+    background-image:linear-gradient(10deg,#6d047d,#24213d,#c85ebb,#1e1b32,#9904aa,#939c95,#a804bc,#440850,#5a596f);
+    height: 100vh;
+    width: 100vw;
+} */
+
+body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: center;
 }
 
 /* Styling The Dom HTML */
@@ -18,11 +32,14 @@ body{
 #bigger-container{
     display: flex;
     font-display: column;
+    justify-content: center;
+    
 }
 
 #poet-image{
     height: 500px;
     width: 500px;
+    border-radius: 1rem;
 }
 
 
@@ -30,6 +47,7 @@ body{
     background-color: rgb(243, 74, 8);
     height: 8rem;
     width: 500px;
+    border-radius: 1rem;
 }
 
 #poet-key{
@@ -39,7 +57,30 @@ body{
 
 #poem-container{
     width: 500px;
-    height: 630px;
-    background-color: blue;
+    height: auto;
+    background-color: rgb(22, 22, 24);
     margin-left: 0.3rem;
+    border-radius: 1rem;
+}
+
+#poet-name{
+    padding: 0.3rem 0.6rem 0rem 0.9rem;
+    
+}
+
+#poet-url{
+    padding: 0.3rem 0.6rem 0rem 0.9rem;
+    text-decoration: none;
+
+
+}
+
+#poetry-title{
+    padding:0.3rem 0.6rem 0rem 0.9rem;
+
+}
+
+#poetry-content{
+    padding: 1rem;
+
 }
