@@ -1,14 +1,25 @@
 //EventListener
 
-document.querySelector('poetry-form').addEventListener('submit',handleSubmit)
+document.querySelector('#poetry-form').addEventListener('submit',handleSubmit)
 
 //Event handlers
 
 function handleSubmit(event){
   event.preventDefault()
   let postPoemObject = {
-    
+    poetryTitle:event.target.title.value,
+    poetryContent:event.target.content.value,
+    url:event.target.url.value,
+    poetname: event.target.poet.name.value,
+    poetImage:event.target.poet.photo_avatar_url.value,
+    poetWebsite:event.target.poet.url.value
+
+
+
+
   }
+  renderOnePoem(poem)
+  postPoem(postPoemObject)
 
 }
 
@@ -59,6 +70,18 @@ const url = 'https://www.poemist.com/api/v1/randompoems'
 function getAllPoems(){
     fetch(url).then(res=>res.json())
     .then(poemObject=>poemObject.forEach(poem=>renderOnePoem(poem)))
+}
+
+function postPoem(postPoemObject){
+fetch('http://localhost:3000/poetry',{
+  method: 'POST',
+  headers:{
+    'Content-Type' : 'application/json'
+  },
+  body: JSON.stringify(postPoemObject)
+}).then(response=>response.json()).then(poemss=>console.log(poemss))
+
+  
 }
 
 //Initial Render
