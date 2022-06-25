@@ -19,13 +19,42 @@ function handleSubmit(event){
     poetImage: event.target.urlPp.value,
     poetName:event.target.nameP.value,
     poetWebsite:event.target.webP.value
+ }
+ const contentFetched = 
 
+postPoemsObject.forEach(item=>item)
+ let secondmainDiv = document.createElement('div')
+ secondmainDiv.className = 'grid-container-One'
+ secondmainDiv.innerHTML = ` <div id="bigger-container">
+ <div id="poet-key">
+   <img
+     src="${event.target.urlPp.value}"
+     alt="poet image"
+     id="poet-image"
+   />
+   <div id="poets-details">
+     <h2 id="poet-name">Author's Name: ${}</h2>
+     <br />
+     <a href="#" target="blank" id="poet-url">Link Up With Author</a>
+   </div>
+ </div>
 
-
-
-  }
-
-  postPoem(postPoemObject)
+ <div id="poem-container">
+   <h2 id="poetry-title">Hello</h2>
+   <p id="poetry-content">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+     alias quam
+   </p>
+   <a href="" id="poetry-url">Read more on the poem</a>
+ </div>
+</div>`
+//  postPoem(postPoemObject)
+//  let secondmainDiv = document.createElement('div')
+//   secondmainDiv.className = 'grid-container-One'
+//   secondmainDiv.append.postPoem(postPoemObject)
+//   document.getElementById('grid-container-One').appendChild('secondmainDiv')
+  
+  
 
 }
 //POST DOM Renderer
