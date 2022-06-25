@@ -1,10 +1,10 @@
 //EventListener
 
 // document.querySelector('#poetry-form').addEventListener('submit',handleSubmit)
-document.addEventListener('DOMContentLoaded',function myDom(){
+// document.addEventListener('DOMContentLoaded',function myDom(){
 
-  document.getElementById('poetry-form').addEventListener('submit',handleSubmit)
-})
+//   document.getElementById('poetry-form').addEventListener('submit',handleSubmit)
+// })
 
 
 //Event handlers
