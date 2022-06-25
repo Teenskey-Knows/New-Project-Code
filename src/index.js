@@ -33,7 +33,7 @@ postPoemsObject.forEach(item=>item)
      id="poet-image"
    />
    <div id="poets-details">
-     <h2 id="poet-name">Author's Name: ${}</h2>
+     <h2 id="poet-name">Author's Name: </h2>
      <br />
      <a href="#" target="blank" id="poet-url">Link Up With Author</a>
    </div>
