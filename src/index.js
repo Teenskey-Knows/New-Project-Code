@@ -1,111 +1,95 @@
 //EventListener
 
-// document.querySelector('#poetry-form').addEventListener('submit',handleSubmit)
-// document.addEventListener('DOMContentLoaded',function myDom(){
+document.addEventListener("DOMContentLoaded", function myDom() {
+  document
+    .querySelector("#poetry-form")
+    .addEventListener("submit", handleSubmit);
 
-//   document.getElementById('poetry-form').addEventListener('submit',handleSubmit)
-// })
+  document
+    .getElementById("poetry-form")
+    .addEventListener("submit", handleSubmit);
 
+  //Event handlers
 
-//Event handlers
+  function handleSubmit(event) {
+    event.preventDefault();
+    let form = new FormData(event.target);
+    let postPoemObject = {
+      title: form.get("title"),
+      content: form.get("content"),
+      url: form.get("poetry-link"),
+      poet: {
+        name: form.get("name"),
+        url: form.get("site"),
+        photo_avatar_url: form.get("image"),
+      },
+    };
 
-function handleSubmit(event){
+    let baseUrl = "http://localhost:3000/poems";
 
-  event.preventDefault()
-  let postPoemObject = {
-    poetryTitle:event.target.titleP.value,
-    poetryContent:event.target.contentP.value,
-    url:event.target.urlP.value,
-    poetImage: event.target.urlPp.value,
-    poetName:event.target.nameP.value,
-    poetWebsite:event.target.webP.value
- }
- const contentFetched = 
+    fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+        Accept: "Application/json",
+      },
 
-postPoemsObject.forEach(item=>item)
- let secondmainDiv = document.createElement('div')
- secondmainDiv.className = 'grid-container-One'
- secondmainDiv.innerHTML = ` <div id="bigger-container">
- <div id="poet-key">
-   <img
-     src="${event.target.urlPp.value}"
-     alt="poet image"
-     id="poet-image"
-   />
-   <div id="poets-details">
-     <h2 id="poet-name">Author's Name: </h2>
-     <br />
-     <a href="#" target="blank" id="poet-url">Link Up With Author</a>
-   </div>
- </div>
+      body: JSON.stringify(postPoemObject),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  }
 
- <div id="poem-container">
-   <h2 id="poetry-title">Hello</h2>
-   <p id="poetry-content">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-     alias quam
-   </p>
-   <a href="" id="poetry-url">Read more on the poem</a>
- </div>
-</div>`
-//  postPoem(postPoemObject)
-//  let secondmainDiv = document.createElement('div')
-//   secondmainDiv.className = 'grid-container-One'
-//   secondmainDiv.append.postPoem(postPoemObject)
-//   document.getElementById('grid-container-One').appendChild('secondmainDiv')
-  
-  
+  //  postPoem(postPoemObject)
+  //  let secondmainDiv = document.createElement('div')
+  //   secondmainDiv.className = 'grid-container-One'
+  //   secondmainDiv.append.postPoem(postPoemObject)
+  //   document.getElementById('grid-container-One').appendChild('secondmainDiv')
 
-}
-//POST DOM Renderer
+  //POST DOM Renderer
 
-// function addMorePoem(poetry){
- 
-//   let secondmainDiv = document.createElement('div')
-//   secondmainDiv.className = 'grid-container-One'
-//   secondmainDiv.innerHTML = `
-//   <div id="bigger-container">
-// <div id="poet-key">
-//   <img
-//     src="${poetry.poet.photo_avatar_url}"
-//     alt="poet image"
-//     id="poet-image"
-//   />
-//   <div id="poets-details">
-//     <h2 id="poet-name">Author's Name: ${poetry.poet.name}</h2>
-//     <br />
-//     <a href="${poetry.poet.url}" target="blank" id="poet-url">Link Up With Author</a>
-//   </div>
-// </div>
+  // function addMorePoem(poetry){
 
-// <div id="poem-container">
-//   <h2 id="poetry-title">${poetry.title}</h2>
-//   <p id="poetry-content">${poetry.content}
+  //   let secondmainDiv = document.createElement('div')
+  //   secondmainDiv.className = 'grid-container-One'
+  //   secondmainDiv.innerHTML = `
+  //   <div id="bigger-container">
+  // <div id="poet-key">
+  //   <img
+  //     src="${poetry.poet.photo_avatar_url}"
+  //     alt="poet image"
+  //     id="poet-image"
+  //   />
+  //   <div id="poets-details">
+  //     <h2 id="poet-name">Author's Name: ${poetry.poet.name}</h2>
+  //     <br />
+  //     <a href="${poetry.poet.url}" target="blank" id="poet-url">Link Up With Author</a>
+  //   </div>
+  // </div>
 
-//   </p>
-//   <a href="${poetry.url}" id="poetry-url">Read more on the poem</a>
-// </div>
-// </div>
+  // <div id="poem-container">
+  //   <h2 id="poetry-title">${poetry.title}</h2>
+  //   <p id="poetry-content">${poetry.content}
 
-  
-  
-//   `
-//   // Attaching Poem to DOM
+  //   </p>
+  //   <a href="${poetry.url}" id="poetry-url">Read more on the poem</a>
+  // </div>
+  // </div>
 
-//   document.querySelector('#grid-container-One').appendChild(secondmainDiv)
+  //   `
+  //   // Attaching Poem to DOM
 
-// }
+  //   document.querySelector('#grid-container-One').appendChild(secondmainDiv)
 
+  // }
 
+  // DOM Renderer Function
 
-
-
-// DOM Renderer Function
-
-function renderOnePoem(poem){
-let mainDiv = document.createElement('div')
-mainDiv.className = 'grid-container'
-mainDiv.innerHTML = `
+  function renderOnePoem(poem) {
+    let mainDiv = document.createElement("div");
+    mainDiv.className = "grid-container";
+    mainDiv.innerHTML = `
 <div id="bigger-container">
 <div id="poet-key">
   <img
@@ -129,38 +113,39 @@ mainDiv.innerHTML = `
 </div>
 </div>
 
-`
+`;
 
-//Add poem to DOM
+    //Add poem to DOM
 
-document.querySelector('#grid-container').appendChild(mainDiv)
-}
+    document.querySelector("#grid-container").appendChild(mainDiv);
+  }
 
-//Fetch Requests
-//Get Fetch for all my poems
-const url = 'https://www.poemist.com/api/v1/randompoems'
+  //Fetch Requests
+  //Get Fetch for all my poems
+  const url = "https://www.poemist.com/api/v1/randompoems";
 
-function getAllPoems(){
-    fetch(url).then(res=>res.json())
-    .then(poemObject=>poemObject.forEach(poem=>renderOnePoem(poem)))
-}
+  function getAllPoems() {
+    fetch(url)
+      .then((res) => res.json())
+      .then((poemObject) => poemObject.forEach((poem) => renderOnePoem(poem)));
+  }
 
-function postPoem(postPoemObject){
-fetch('http://localhost:3000/poetry',{
-  method: 'POST',
-  headers:{
-    'Content-Type' : 'application/json'
-  },
-  body: JSON.stringify(postPoemObject)
-}).then(response=>response.json()).then(poemz=>console.log(poemz))
+  function postPoem(postPoemObject) {
+    fetch("http://localhost:3000/poetry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postPoemObject),
+    })
+      .then((response) => response.json())
+      .then((poemz) => console.log(poemz));
+  }
 
-  
-}
+  getAllPoems();
+});
 
 //Initial Render
-function initialize(){
-    getAllPoems()
-    
-}
 
-initialize()
+
+
