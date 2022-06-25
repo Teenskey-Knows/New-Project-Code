@@ -125,7 +125,7 @@ mainDiv.innerHTML = `
   <p id="poetry-content">${poem.content}
 
   </p>
-  <a href="${poem.url}" id="poetry-url">Read more on the poem</a>
+  <a href="${poem.url}" id="poetry-url" target="blank">Read more on the poem</a>
 </div>
 </div>
 

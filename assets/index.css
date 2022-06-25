@@ -15,14 +15,45 @@ html {
     display: flex;
     justify-content: center;
     margin-left: 15rem;
-    height: 30rem;
-    width: 20rem;
+    height: 35rem;
+    width: 22rem;
     background-color: rgb(108, 146, 18);
     padding: 1rem;
     margin-bottom: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 2rem;
 
 
 
+}
+#postApoem{
+    color: blueviolet;
+    
+}
+
+label{
+    font-size: 1.5rem;
+    color: rgb(204, 12, 162);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+
+
+input{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: blueviolet;
+}
+
+textarea{
+    background-color: blueviolet;
+}
+
+#btn-submit{
+    text-decoration: none;
+    color: rgb(17, 2, 17);
+    background-color: blueviolet;
+    size: 2rem;
 }
 body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
@@ -34,6 +65,9 @@ body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71
 .header{
     display: flex;
     justify-content: center;
+    color: rgb(204, 12, 162);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 4rem;
 }
 
 /* Styling The Server Appendee */
@@ -77,6 +111,7 @@ body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71
     height: 8rem;
     width: 500px;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #poet-key{
@@ -87,9 +122,11 @@ body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71
 #poem-container{
     width: 500px;
     height: auto;
-    background-color: rgb(22, 22, 24);
+    background-color: rgb(4, 4, 46);
     margin-left: 0.3rem;
     border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #poet-name{
@@ -113,4 +150,36 @@ body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71
 #poetry-content{
     padding: 1rem;
 color: antiquewhite;
+}
+
+#poet-url{
+    color: rgb(243, 201, 17);
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+}
+
+#poet-url:hover{
+    color: rgb(16, 212, 196);
+    transition: 10ms;
+}
+
+
+#poetry-url{
+
+    color: rgb(243, 201, 17);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-shadow: 2px 2px 5px red;
+}
+
+#poetry-url:hover{
+    color: rgb(16, 212, 196);
+    transition: 10ms;
+}
+
+#poetry-title{
+    color: rgb(255, 0, 212);
+    text-shadow: 2px 2px 5px red;
 }
