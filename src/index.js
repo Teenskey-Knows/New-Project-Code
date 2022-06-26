@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function myDom() {
     .querySelector("#poetry-form")
     .addEventListener("submit", handleSubmit);
 
-  document
-    .getElementById("poetry-form")
-    .addEventListener("submit", handleSubmit);
+  // document
+  //   .getElementById("poetry-form")
+  //   .addEventListener("submit", handleSubmit);
 
   //Event handlers
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function myDom() {
 
   //Fetch Requests
   //Get Fetch for all my poems
-  const url = "https://www.poemist.com/api/v1/randompoems";
+  const url = "https://www.poemist.com/api/v1/random432244444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444poems";
 
   function getAllPoems() {
     fetch(url)
