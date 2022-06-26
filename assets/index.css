@@ -10,32 +10,89 @@ html {
     width: 100vw;
 } */
 
-#poetry-form-layout{
 
+
+.header{
     display: flex;
     justify-content: center;
+    color: rgb(204, 12, 162);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 4rem;
+    /* position: sticky;
+    top: 0; */
+}
+#grid-layout-1{
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    display: flex;
+    
+}
+
+
+#poetry-form-layout{
+/* 
+    display: flex;
+    justify-content: center; */
+    position: relative;
     margin-left: 15rem;
     height: 35rem;
     width: 22rem;
     background-color: rgb(108, 146, 18);
     padding: 1rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 3rem;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 2rem;
 
 
 
 }
-#postApoem{
-    color: blueviolet;
-    
+
+#poetry-form{
+
+    margin-left: 2.5rem;
+
 }
 
-label{
+
+#site-description-for-poem{
+    /* display: flex;
+    justify-content: center; */
+    position: absolute;
+    left: 15rem;
+    top: 0.5rem;
+    margin-left: 15rem;
+    height: 35rem;
+    width: 22rem;
+    background-color: rgb(108, 146, 18);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 2rem;
+
+
+}
+
+.description-about-the-website{
     font-size: 1.5rem;
+    color: rgb(100, 34, 3);
+}
+#postApoem{
+    /* color: blueviolet; */
+    display: flex;
+    justify-content: center;
     color: rgb(204, 12, 162);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 1.7rem;
+}
     
+
+
+label{
+    /* font-size: 1.5rem;
+    color: rgb(204, 12, 162);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    font-size: 1.5rem;
+    color: rgb(100, 34, 3);
 }
 
 
@@ -62,13 +119,10 @@ body{background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71
 
 
 
-.header{
-    display: flex;
-    justify-content: center;
-    color: rgb(204, 12, 162);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 4rem;
-}
+
+
+
+
 
 /* Styling The Server Appendee */
 

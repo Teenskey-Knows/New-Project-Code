@@ -5,61 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/index.css">
-    <script defer  src="./src/index.js"></script>
-    
-   
+    <link rel="stylesheet" href="./assets/index.css" />
+    <script defer src="./src/index.js"></script>
   </head>
   <body>
     <h1 class="header">The Poetry Hub</h1>
-    <div id="poetry-form-layout">
-      <form id="poetry-form" method="POST" class="data-form" action="">    
-        <label id="postApoem"for="POST A POEM">POST A POEM</label>
-        <br>
-      <label for=" poetryTitle">Poetry Title
-      <br />
-      <input type="text" placeholder="Poetry Title" id="titleP" name="title" value=""/></label>
-      <br />
-      <label for="poetryContent">Poetry Content
-      <br />
-      <textarea
-        placeholder="Input poetry content"
-        name="content"
-        id="contentP"
-        cols="20"
-        rows="10"
-        value=""
-      ></textarea></label>
-      <br />
-      <label for="url">Poetry Link Source
-      <br />
-      <input type="url" placeholder="input poetry url" name="poetry-link" id="urlP" value=""/>
-      </label><br />
-      <label for="poetImage">Poet's image
-        <br>
-        <input type="text" placeholder="input poet's name" id="urlPp" name="image" value="">
-      </label>
-      <br>
-      <label for="poetName">Poet's name
-        <br>
-        <input type="text" placeholder="input poet's image url" name="name" id="nameP" value="">
-      </label>
-      <br>
-      <label for="poetWebsite">Poet's link's websites
-        <br>
-        <input type="url" placeholder="input poet's website url" name="site" id="webP" value="">
-      </label>
-      <br>
+    <div id="grid-layout-1">
+      <div id="poetry-form-layout">
+        <form id="poetry-form" method="POST" class="data-form" action="">
+          <label id="postApoem" for="POST A POEM">POST A POEM</label>
+          <br />
+          <label for=" poetryTitle"
+            >Poetry Title
+            <br />
+            <input
+              type="text"
+              placeholder="Poetry Title"
+              id="titleP"
+              name="title"
+              value=""
+          /></label>
+          <br />
+          <label for="poetryContent"
+            >Poetry Content
+            <br />
+            <textarea
+              placeholder="Input poetry content"
+              name="content"
+              id="contentP"
+              cols="20"
+              rows="10"
+              value=""
+            ></textarea>
+          </label>
+          <br />
+          <label for="url"
+            >Poetry Link Source
+            <br />
+            <input
+              type="url"
+              placeholder="input poetry url"
+              name="poetry-link"
+              id="urlP"
+              value=""
+            /> </label
+          ><br />
+          <label for="poetImage"
+            >Poet's image
+            <br />
+            <input
+              type="text"
+              placeholder="input poet's name"
+              id="urlPp"
+              name="image"
+              value=""
+            />
+          </label>
+          <br />
+          <label for="poetName"
+            >Poet's name
+            <br />
+            <input
+              type="text"
+              placeholder="input poet's image url"
+              name="name"
+              id="nameP"
+              value=""
+            />
+          </label>
+          <br />
+          <label for="poetWebsite"
+            >Poet's link's websites
+            <br />
+            <input
+              type="url"
+              placeholder="input poet's website url"
+              name="site"
+              id="webP"
+              value=""
+            />
+          </label>
+          <br />
 
-      <button type="submit" id="btn-submit">Post</button>
-    </form>
+          <button type="submit" id="btn-submit">Post</button>
+        </form>
+
+        <div id="site-description-for-poem">
+          <div id="description-container">
+
+            <p class="description-about-the-website">
+
+              Hello there, this is a one-stop site for all poetry enthusiasts. This platform offers you unlimited randomized poems from different authors. 
+
+              <br>
+
+              Through this platform, as a user, you will be able to learn more about your preffered author by visiting a link attached under their name.
+
+              <br>
+
+              Moreover, one is able to visit the website in which the poem was originally posted to.
+
+
+              <br>
+
+              As a user you are also able to post a poem of your liking, update it or even delete it.
+
+              <br>
+
+              Feel free to explore.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <!-- Appending from my server -->
 
-    <div id="grid-container-One">
-      
-    </div>
+    <div id="grid-container-One"></div>
     <!-- My  API Content Structure -->
 
     <div id="grid-container">
@@ -88,6 +150,5 @@
         </div>
       </div> -->
     </div>
-   
   </body>
 </html>
