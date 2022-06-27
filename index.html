@@ -9,11 +9,21 @@
     <script defer src="./src/index.js"></script>
   </head>
   <body>
+  
+  
+  
+  
+  
     <h1 class="header">The Poetry Hub</h1>
+    
+    
+ 
     <div id="grid-layout-1">
+      
       <div id="poetry-form-layout">
         <form id="poetry-form" method="POST" class="data-form" action="">
           <label id="postApoem" for="POST A POEM">POST A POEM</label>
+        
           <br />
           <label for=" poetryTitle"
             >Poetry Title
@@ -50,37 +60,37 @@
               value=""
             /> </label
           ><br />
-          <label for="poetImage"
-            >Poet's image
-            <br />
-            <input
-              type="text"
-              placeholder="input poet's name"
-              id="urlPp"
-              name="image"
-              value=""
-            />
-          </label>
-          <br />
           <label for="poetName"
             >Poet's name
             <br />
             <input
               type="text"
-              placeholder="input poet's image url"
+              placeholder="input poet's name"
+              id="urlPp"
               name="name"
-              id="nameP"
               value=""
             />
           </label>
           <br />
-          <label for="poetWebsite"
-            >Poet's link's websites
+          <label for="poetSite"
+            >Poet's website
             <br />
             <input
               type="url"
               placeholder="input poet's website url"
               name="site"
+              id="nameP"
+              value=""
+            />
+          </label>
+          <br />
+          <label for="poetImageUrl"
+            >Poet's link's image url
+            <br />
+            <input
+              type="url"
+              placeholder="input poet's image url"
+              name="image"
               id="webP"
               value=""
             />
@@ -89,7 +99,10 @@
 
           <button type="submit" id="btn-submit">Post</button>
         </form>
+        <button id="refresh">Refresh</button>
 
+       
+       
         <div id="site-description-for-poem">
           <div id="description-container">
 
@@ -108,7 +121,7 @@
 
               <br>
 
-              As a user you are also able to post a poem of your liking, update it or even delete it.
+              As a user you are also able to post a poem of your liking and it will be displayed on the website once you refresh.
 
               <br>
 
@@ -119,9 +132,45 @@
       </div>
     </div>
 
+  
+
+
     <!-- Appending from my server -->
 
-    <div id="grid-container-One"></div>
+    <div id="grid-container-One">
+
+  <!-- <div id="bigger-container">
+        <div id="poet-key">
+          <img
+            src="https://pbs.twimg.com/profile_images/1518574167444144130/gbxEiBIy_400x400.jpg"
+            alt="poet image"
+            id="poet-image"
+          />
+          <div id="poets-details">
+            <h2 id="poet-name">Author's Name: Martin Kamau</h2>
+            <br />
+            <a href="#" target="blank" id="poet-url">Link Up With Author</a>
+          </div>
+        </div>
+
+        <div id="poem-container">
+          <h2 id="poetry-title">Hello</h2>
+          <p id="poetry-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            alias quam
+          </p>
+          <a href="" id="poetry-url">Read more on the poem</a>
+        </div>
+      </div> -->
+
+
+
+
+
+
+
+
+    </div>
     <!-- My  API Content Structure -->
 
     <div id="grid-container">

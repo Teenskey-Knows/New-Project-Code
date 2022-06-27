@@ -25,3 +25,51 @@
  </div>
 </div>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+userDiv.innerHTML = `
+    
+    <div id="bigger-container">
+<div id="poet-key">
+  <img
+    src="${data.poet.photo_avatar_url}"
+    alt="poet image"
+    id="poet-image"
+  />
+  <div id="poets-details">
+    <h2 id="poet-name">Author's Name: ${data.poet.name}</h2>
+    <br />
+    <a href="${data.poet.url}" target="blank" id="poet-url">Link Up With Author</a>
+  </div>
+</div>
+
+<div id="poem-container">
+  <h2 id="poetry-title">${data.title}</h2>
+  <p id="poetry-content">${data.content}
+
+  </p>
+  <a href="${data.url}" id="poetry-url" target="blank">Read more on the poem</a>
+</div>
+</div>
+    
+    
+    
+    `
